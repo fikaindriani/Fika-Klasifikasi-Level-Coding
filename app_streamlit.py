@@ -20,12 +20,14 @@ oop_usage = st.radio("oop_usage", ["Yes", "No"])
 
 
 if st.button("prediksi", type="primary"):
-	data_baru = pd.DataFrame([[4.0, "Python", 56, "Yes", "Yes", "Intermediate"]],
+	data_baru = pd.DataFrame([[hours_coding_daily, preferred_language, typing_speed, import_usage, oop_usage, level]],
                          columns=["hours_coding_daily", "preferred_language", "typing_speed", "import_usage", "oop_usage", "level"])
 	prediksi = model.predict(data_baru)[0]
 	presentase = max(model.predict_proba(data_baru)[0])
 	st.success(f"Model Memprediksi {prediksi} dengan tingkat keyakinan {presentase*100:.2f}%")
 	st.balloons()
 
+
 st.divider()
+
 st.caption("Model Ini Di Buat Oleh **Fika💜💟**")
