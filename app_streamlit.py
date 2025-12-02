@@ -16,7 +16,7 @@ st.markdown("Klasifikasi level coding berdasarkan fitur hours coding daily, pref
 hours_coding_daily = st.slider("hours_coding_daily", 2.5, 5.5, 3.0)
 preferred_language = st.selectbox("preferred_language", ["Python", "C++", "Java"])
 typing_speed = st.slider("typing_speed", 25, 65, 35)
-import_usage = st.selectbox("import_usage", ["Yes", "No"])
+import_usage = st.pills("import_usage", ["Yes", "No"])
 oop_usage = st.radio("oop_usage", ["Yes", "No"])
 
 # Prediksi
@@ -32,3 +32,4 @@ if st.button("prediksi", type="primary"):
 
 st.divider()
 st.caption("Model Ini Di Buat Oleh **Fika💜💟**")
+
